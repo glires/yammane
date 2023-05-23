@@ -1,13 +1,14 @@
 # 動物実験管理システム Yammane
 **Y**our **a**dvanced **m**anager for **m**erciful **a**nimals **n**ecessary for **e**xperiments  
 
-動物実験を適正に実施し、また実験を行う側、管理する側、審査する側の便宜を図るため、ブラウザから利用できる動物実験管理システムのオープンソース開発を進めています。
+動物実験を適正に実施し、また、実験を行う側、管理する側、審査する側のデータを一元管理して即時共有するなどの便宜を図るため、ブラウザから利用できる動物実験管理システムのオープンソース開発を進めています。
 
 <img src="static/logo.png" alt="Yammane" width="440">
 
 ## 検証中の実行環境
 - Linux 3.10.0
 - CentOS 7.9.2009
+- Z shell 5.0.2
 - Python 3.10.0
 - Conda 23.1.0
 - Flask 2.2.3
@@ -15,6 +16,12 @@
 - Nginx 1.22.1
 - SQLAlchemy 2.0.4
 - MariaDB 10.10.2
+
+## 実行方法
+`% uwsgi --ini uwsgi.ini < /dev/null > var/uwsgi.stdout 2> var/uwsgi.stderr &!`
+
+## 開発拠点
+国立成育医療研究センター https://www.ncchd.go.jp/
 
 ## 発表
 ### 動物実験管理システムのオープンソース開発
