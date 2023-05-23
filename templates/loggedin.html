@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+
+<html lang="ja">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="description" content="Yammane">
+  <meta name="keywords" content="Yammane, Mammals, ">
+  <meta name="author" content="Yammane">
+  <meta name="viewport" content="width=device-width">
+  <link rel="stylesheet" href="/static/yammane.css" type="text/css">
+  <link rel="shortcut icon" href="/static/yammane.ico" />
+  <title>Yammane</title>
+</head>
+
+<body class="yammane">
+
+<p class="tactr"><br></p>
+<p class="tactr"><br></p>
+
+<p class="tactr"><img src="/static/logo.png" width="370"></p>                                                                
+<h1 class="tactr">動物実験管理システム</h1>
+<p class="tactr"><br></p>
+<p class="tactr">アカウント {{ who }} で処理を行っています。<br></p>
+<p class="tactr"><br></p>
+<p class="tactr">
+  <input type="button" onclick="location.href='/apply'" value="申請書の提出" style="width: 9em; height: 2em">
+  &nbsp; &nbsp;
+  <input type="button" onclick="location.href='/animals'" value="個体管理" style="width: 9em; height: 2em">
+  &nbsp; &nbsp;
+  <input type="button" onclick="location.href='/passwd'" value="パスワード変更" style="width: 9em; height: 2em">
+  &nbsp; &nbsp;
+  <input type="button" onclick="location.href='/logout'" value="ログアウト" style="width: 9em; height: 2em">
+</p>
+{% if administrator %}
+<p class="tactr">
+  <input type="button" onclick="location.href='/request_index'" value="申請状況の一覧" style="width: 9em; height: 2em">
+  &nbsp; &nbsp;
+  <input type="button" onclick="location.href='/adduser'" value="アカウント追加" style="width: 9em; height: 2em">
+</p>
+{% endif %}
+
+<p class="tactr"><br></p>
+<p class="tactr"><br></p>
+<h3 class="tactr">お知らせ</h3>
+<table style="width: 720px; margin: auto">
+  {% for n in news %}
+  <tr><td><b>{{ n.date }} {{ n.title }}</b></td></tr>
+  <tr><td>{{ n.text }}</td></tr>
+  <tr><td>&nbsp;</td></tr>
+  {% endfor %}
+</table>
+
+</body>
+
+</html>
