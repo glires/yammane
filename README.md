@@ -39,8 +39,8 @@ https://github.com/glires/yammane
 ## コンテナ
 https://hub.docker.com/repository/docker/okamurak/yammane
 
+## ウェブアプリケーション
+<img src="static/example_browser.png" alt="Yammane" width="700">
+
 ## 英文概要
 For animal experiments, each research institute must create a committee and regulations to supervise their experiment plans. They usually rely on expensive outsourced software to handle the amount and complexity of the pertinent information. Its maintenance cost is also a burden because updates are frequently required. Since attacks on medical information systems with ransomware or other malware have been increasing, there are concerns about employing such proprietary software. Here, researchers and administrative staff involving animal experiments have formed a team to develop our own management system with open-source software, namely, Linux, Apache, MariaDB, and Python. Because the system was designed as a web service based on the framework Flask and SQLAlchemy on the LAMP environment, it can be used in any client environment, including Linux and Windows, as well as smartphones, without the need to install any additional software. Its specification and documentation on installation and handling are also available, allowing users to operate and maintain it as an administrator. We continue to develop the system at the community level by releasing it to the public, especially in terms of security, as well as providing a support system for users, with the goal of making the system widely used in this country.
-
-
-<img src="static/example_browser.png" alt="Yammane" width="640">
