@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+
+<html lang="ja">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="description" content="Yammane">
+  <meta name="keywords" content="Yammane, Mammals, ">
+  <meta name="author" content="Yammane">
+  <meta name="viewport" content="width=device-width">
+  <link rel="stylesheet" href="/static/yammane.css" type="text/css">
+  <link rel="shortcut icon" href="/static/yammane.ico" />
+  <title>Yammane</title>
+</head>
+
+<body class="yammane">
+
+<p class="tactr"><br></p>
+<p class="tactr"><br></p>
+
+<p class="tactr"><img src="/static/logo.png" width="370"></p>
+<h1 class="tactr">動物実験管理システム</h1>
+<p class="tactr"><br></p>
+<p class="tactr">申請内容の確認および変更<br></p>
+<p class="tactr"><br></p>
+<p class="tactr">アカウント {{ user_name }} で処理を行っています。<br></p>
+<p class="tactr"><br></p>
+<p class="tactr">
+
+<h3 class="tactr">申請書一覧</h3>
+<table style="width: 700px; margin: auto">
+    <tr>
+        <th>受付番号</th>
+        <th>研究課題名</th>
+        <th>申請者</th>
+        <th>開始日・終了日</th>
+        <th>申請状況</th>
+        <th>新規購入・搬入・照会</th>
+    </tr>
+    {% for result in results %}
+    <tr align="center">
+    <td>{{ result.request_id }}</td>
+    <td>{{ result.title_name }}</td>
+    <td>{{ user_name }}</td>
+    <td>{{ result.start_time }} ~ {{ result.finish_time }}</td>
+    <td>{{ result.allow }}</td>
+    <td>
+    <form action="change_request" method="post">
+    <input type="hidden" name="request_id" value="{{result.request_id}}">
+    <input type="submit" value="申請内容の変更">
+    </form>
+    <form action="change_place" method="post">
+    <input type="hidden" name="request_id" value="{{result.request_id}}">
+    <input type="submit" value="新規・追加搬入">
+    </form>
+    <form action="file" method="post">
+    <input type="hidden" name="request_id" value="{{result.request_id}}">
+    <input type="submit" value="添付書類の提出">
+    </form> <br>
+    <form action="report" method="post">
+    <input type="hidden" name="request_id" value="{{result.request_id}}">
+    <input type="submit" value="終了報告">
+    </form>
+    </td>
+    </tr>
+    {% endfor %}
+</table>
+
+<p class="tactr"><br></p>
+
+<p class="tactr">
+<input type="button" onclick="location.href='/'" value="戻る" style="width: 9em; height: 2em">
+</p>
+
+</body>
+
+</html>
