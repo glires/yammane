@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+
+<html lang="ja">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="description" content="Yammane Login">
+  <meta name="keywords" content="Yammane, Mammals, ">
+  <meta name="author" content="Yammane">
+  <meta name="viewport" content="width=device-width">
+  <link rel="stylesheet" href="/static/yammane.css" type="text/css">
+  <link rel="shortcut icon" href="/static/yammane.ico" />
+  <title>Yammane</title>
+</head>
+
+<body class="yammane">
+
+<p class="tactr"><br></p>
+<p class="tactr"><br></p>
+
+<p class="tactr"><img src="/static/logo.png" width="370"></p>                                                                
+<h1 class="tactr">動物実験管理システム</h1>
+<p style="text-align: center"><br></p>
+
+<form class="tactr" method="post" action="/">
+  {%- if error != "" -%}
+  {{error}}
+  {%- endif -%}
+  <table class="tblctr">
+    <tr><td>&nbsp;</td><td>&nbsp;</td></tr>
+    <tr><td>アカウント</td><td><input type="text" name="account" required></td></tr>
+    <tr><td>&nbsp;</td><td>&nbsp;</td></tr>
+    <tr><td>パスワード</td><td><input type="password" name="password" required></td></tr>
+    <tr><td>&nbsp;</td><td>&nbsp;</td></tr>
+  </table>
+  <input type="button" value="戻る" onClick="history.back()" style="width: 9em; height: 2em">
+  &nbsp; &nbsp;
+  <input type="reset"  value="リセット" style="width: 9em; height: 2em">
+  &nbsp; &nbsp;
+  <input type="submit" name="submit" value="ログイン" style="width: 9em; height: 2em">
+</form>
+
+</body>
+
+</html>
