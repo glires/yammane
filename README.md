@@ -1,8 +1,9 @@
 # 動物実験管理システム Yammane
-Your advanced manager for merciful animals necessary for experiments
+Your advanced manager for merciful animals necessary for experiments  
+
 動物実験を適正に実施し、また実験を行う側、管理する側、また審査する側の便宜を図り、動物実験管理システムのオープンソース開発を進めています。
 
-![alt text](static/logo.png "Yammane")
+<img src="static/logo.png" alt="Yammane" width="400">
 
 ## 検証中の実行環境
 - Linux 3.10.0
