@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+
+<html lang="ja">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="description" content="Yammane">
+  <meta name="keywords" content="Yammane, Mammals, ">
+  <meta name="author" content="Yammane">
+  <meta name="viewport" content="width=device-width">
+  <link rel="stylesheet" href="/static/yammane.css" type="text/css">
+  <link rel="shortcut icon" href="/static/yammane.ico" />
+  <title>Yammane</title>
+</head>
+
+<body class="yammane">
+
+<p class="tactr"><br></p>
+<p class="tactr"><br></p>
+
+<p class="tactr"><img src="/static/logo.png" width="370"></p>
+<h1 class="tactr">動物実験管理システム</h1>
+<p class="tactr"><br></p>
+<p class="tactr">
+
+<h2 class="tactr">パスワードの変更</h2>
+<h3 class="tactr">{{ msg }}</h3>
+
+<form action="passwd" method="post">
+<table class="tblctr">
+<tr><td>アカウント</td><td><input type="text" name="account_id" required></td></tr>
+<tr><td>現在のパスワード</td><td><input type="password" name="password_cu" required></td></tr>
+<tr><td>新しいパスワード</td><td><input type="password" name="password_nw" required></td></tr>
+<tr><td>新しいパスワード (確認)</td><td><input type="password" name="password_re" required></td></tr>
+</table>
+<p class="tactr"><br></p>
+<table class="tblctr">
+<tr>
+  <td>
+    <input type="button" onclick="location.href='/'" value="戻る" style="width: 9em; height: 2em">
+    &nbsp; &nbsp;
+    <input type="submit" name="submit" value="変更" style="width: 9em; height: 2em">
+  </td>
+</tr>
+</table>
+</form>
+
+</body>
+
+</html>
