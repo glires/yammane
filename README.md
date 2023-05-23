@@ -1,5 +1,5 @@
 # 動物実験管理システム Yammane
-***Y***our ***a***dvanced ***m***anager for ***m***erciful ***a***nimals ***n***ecessary for ***e***xperiments  
+**Y**our **a**dvanced **m**anager for **m**erciful **a**nimals **n**ecessary for **e**xperiments  
 
 動物実験を適正に実施し、また実験を行う側、管理する側、審査する側の便宜を図るため、ブラウザから利用できる動物実験管理システムのオープンソース開発を進めています。
 
